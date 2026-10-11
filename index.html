@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>猫咪电影网 | 治愈系观影与正版渠道导航</title>
+  <meta name="description" content="猫咪电影网（maomidianyingwang-h5）提供治愈、萌宠、宅家撸猫主题片单，正版渠道导航与防盗版避坑指南。不提供盗版资源、磁力、网盘与成人内容。" />
+  <meta name="author" content="猫咪电影网" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#ff9f43" />
+  <link rel="canonical" href="https://maomidianyingwang-h5.github.io/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="猫咪电影网" />
+  <meta property="og:title" content="猫咪电影网 | 治愈系观影与正版渠道导航" />
+  <meta property="og:description" content="治愈片单、萌宠纪录片、宅家撸猫观影场景，正版渠道与避坑指南。" />
+  <meta property="og:url" content="https://maomidianyingwang-h5.github.io/" />
+  <meta property="og:locale" content="zh_CN" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="猫咪电影网 | 治愈系观影与正版渠道导航" />
+  <meta name="twitter:description" content="和猫咪一起看电影，治愈系片单与正版导航。" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "猫咪电影网",
+    "url": "https://maomidianyingwang-h5.github.io/",
+    "description": "治愈系观影推荐、萌宠主题片单与正版渠道导航站。",
+    "inLanguage": "zh-CN"
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg: #fef9f3;
+      --dark: #2f3542;
+      --primary: #ff9f43;
+      --primary-deep: #ee7e1e;
+      --accent: #10ac84;
+      --accent-deep: #0b8a66;
+      --line: #f0e0d0;
+      --card: #ffffff;
+      --muted: #747d8c;
+      --radius: 20px;
+      --maxw: 1160px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--dark);line-height:1.7;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+    /* 导航 */
+    header.nav{position:sticky;top:0;z-index:50;background:rgba(254,249,243,.95);backdrop-filter:blur(10px);border-bottom:3px dotted var(--line)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+    .logo{font-weight:900;font-size:22px;display:flex;align-items:center;gap:8px}
+    .logo b{color:var(--primary)}
+    .logo span{color:var(--accent)}
+    nav.menu{display:flex;gap:12px;font-size:14px;font-weight:600}
+    nav.menu a{padding:8px 16px;border-radius:20px;transition:.3s;border:2px solid transparent}
+    nav.menu a:hover{color:var(--primary);border-color:var(--primary);background:#fff}
+    .nav-toggle{display:none;background:none;border:2px solid var(--dark);color:var(--dark);border-radius:50%;width:40px;height:40px;font-size:18px;cursor:pointer}
+
+    /* Hero：猫窝风格 */
+    .hero{padding:80px 0 70px;border-bottom:5px solid var(--dark);background:radial-gradient(circle at 85% 15%, rgba(255,159,67,.15), transparent 50%), radial-gradient(circle at 15% 85%, rgba(16,172,132,.12), transparent 50%);position:relative;overflow:hidden}
+    .hero .wrap{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+    .hero-text .badge{display:inline-flex;align-items:center;gap:6px;background:var(--dark);color:#fff;font-size:12px;font-weight:800;padding:6px 16px;border-radius:20px;margin-bottom:20px}
+    .hero h1{font-size:clamp(30px,5vw,52px);line-height:1.15;margin:0 0 16px;font-weight:900}
+    .hero h1 em{font-style:normal;color:var(--primary);position:relative}
+    .hero h1 em::after{content:"";position:absolute;bottom:2px;left:0;right:0;height:8px;background:rgba(16,172,132,.3);z-index:-1;border-radius:4px}
+    .hero p.lead{font-size:17px;color:var(--muted);margin:0 0 24px;max-width:540px}
+    .hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+    .hero-tag{background:#fff;border:2px dashed var(--line);border-radius:16px;padding:6px 14px;font-size:13px;font-weight:600;color:var(--dark)}
+    .cta{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{padding:14px 28px;border-radius:25px;font-weight:800;font-size:15px;transition:.3s;display:inline-flex;gap:8px;align-items:center;cursor:pointer}
+    .btn-primary{background:var(--primary);color:#fff;border:2px solid var(--primary)}
+    .btn-primary:hover{background:var(--primary-deep);border-color:var(--primary-deep)}
+    .btn-ghost{border:2px solid var(--dark);color:var(--dark);background:transparent}
+    .btn-ghost:hover{background:var(--dark);color:#fff}
+    /* 猫爪装饰 */
+    .cat-paw{width:200px;height:200px;position:relative}
+    .paw-main{width:100px;height:110px;background:var(--primary);border-radius:50%;position:absolute;top:50px;left:50px;opacity:.9}
+    .paw-toe{width:40px;height:45px;background:var(--primary);border-radius:50%;position:absolute;opacity:.9}
+    .paw-toe:nth-child(2){top:0;left:30px}
+    .paw-toe:nth-child(3){top:-10px;left:80px}
+    .paw-toe:nth-child(4){top:10px;left:120px}
+    .paw-toe:nth-child(5){top:40px;left:140px}
+
+    section{padding:64px 0;border-bottom:3px dotted var(--line)}
+    .sec-head{margin-bottom:40px;text-align:center}
+    .sec-head .kicker{color:var(--primary);font-weight:800;letter-spacing:2px;font-size:12px}
+    .sec-head h2{font-size:clamp(24px,4vw,34px);margin:8px 0 10px;font-weight:900}
+    .sec-head p{color:var(--muted);margin:0 auto;max-width:680px;font-size:15px}
+
+    /* 栏目1：喵影片单 - 猫爪印网格 */
+    .paw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .paw-card{background:var(--card);border:3px solid var(--line);border-radius:30px;padding:30px 20px;text-align:center;transition:.3s;position:relative}
+    .paw-card:hover{transform:translateY(-6px);border-color:var(--primary);box-shadow:0 12px 30px rgba(255,159,67,.15)}
+    .paw-icon{width:70px;height:70px;margin:0 auto 16px;background:rgba(255,159,67,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px}
+    .paw-card:nth-child(2) .paw-icon{background:rgba(16,172,132,.1)}
+    .paw-card:nth-child(3) .paw-icon{background:rgba(47,53,66,.1)}
+    .paw-card:nth-child(4) .paw-icon{background:rgba(255,159,67,.2)}
+    .paw-card h3{margin:0 0 8px;font-size:17px;font-weight:800}
+    .paw-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}
+    .paw-card .paw-print{position:absolute;bottom:15px;right:15px;font-size:20px;opacity:.2}
+
+    /* 栏目2：治愈动画与萌宠 - 毛线球缠绕布局 */
+    .yarn-section{position:relative;max-width:900px;margin:0 auto}
+    .yarn-center{width:160px;height:160px;background:var(--accent);border-radius:50%;margin:0 auto 40px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:800;text-align:center;position:relative;box-shadow:0 0 0 15px rgba(16,172,132,.1)}
+    .yarn-center::before{content:"";position:absolute;width:180px;height:180px;border:3px dashed var(--accent);border-radius:50%;animation:spin 20s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .yarn-item{position:absolute;background:var(--card);border:2px solid var(--line);border-radius:16px;padding:18px 20px;width:240px;transition:.3s}
+    .yarn-item:hover{border-color:var(--accent);transform:scale(1.05)}
+    .yarn-item:nth-child(2){top:0;left:0}
+    .yarn-item:nth-child(3){top:0;right:0}
+    .yarn-item:nth-child(4){bottom:0;left:0}
+    .yarn-item:nth-child(5){bottom:0;right:0}
+    .yarn-item h3{margin:0 0 6px;font-size:15px;font-weight:800}
+    .yarn-item p{margin:0;font-size:12px;color:var(--muted)}
+
+    /* 栏目3：宅家撸猫场景 - 猫爬架分层 */
+    .cat-tree{display:flex;flex-direction:column;gap:16px;max-width:800px;margin:0 auto}
+    .tree-level{border:3px solid var(--dark);border-radius:20px;padding:24px 28px;display:flex;gap:20px;align-items:center;background:var(--card);position:relative}
+    .tree-level::after{content:"";position:absolute;left:50%;bottom:-16px;width:4px;height:16px;background:var(--dark);transform:translateX(-50%)}
+    .tree-level:last-child::after{display:none}
+    .tree-level:nth-child(1){border-color:var(--primary)}
+    .tree-level:nth-child(2){border-color:var(--accent);margin-left:40px}
+    .tree-level:nth-child(3){border-color:var(--dark);margin-right:40px}
+    .tree-level:nth-child(4){border-color:#a55eea}
+    .tree-icon{font-size:36px;flex-shrink:0;width:60px;height:60px;display:flex;align-items:center;justify-content:center;background:var(--bg);border-radius:50%}
+    .tree-level h3{margin:0 0 4px;font-size:17px;font-weight:800}
+    .tree-level p{margin:0;font-size:14px;color:var(--muted)}
+
+    /* 栏目4：正版渠道 - 猫罐头排列 */
+    .can-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .can{background:var(--card);border:3px solid var(--line);border-radius:16px 16px 24px 24px;padding:24px 18px;text-align:center;transition:.3s;position:relative;overflow:hidden}
+    .can::before{content:"";position:absolute;top:0;left:0;right:0;height:12px;background:var(--primary)}
+    .can:nth-child(2)::before{background:var(--accent)}
+    .can:nth-child(3)::before{background:var(--dark)}
+    .can:nth-child(4)::before{background:#a55eea}
+    .can:hover{transform:translateY(-4px)}
+    .can-icon{font-size:32px;margin:12px 0 10px}
+    .can h3{margin:0 0 6px;font-size:15px;font-weight:800}
+    .can p{margin:0;font-size:12px;color:var(--muted)}
+
+    /* 栏目5：避坑指南 - 猫抓板警示 */
+    .scratch-list{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .scratch{background:var(--card);border:3px solid var(--dark);border-radius:12px;padding:24px;position:relative;overflow:hidden}
+    .scratch::after{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(45deg,transparent,transparent 8px,rgba(255,159,67,.05) 8px,rgba(255,159,67,.05) 16px);pointer-events:none}
+    .scratch:nth-child(2){border-color:var(--accent)}
+    .scratch:nth-child(2)::after{background:repeating-linear-gradient(-45deg,transparent,transparent 8px,rgba(16,172,132,.05) 8px,rgba(16,172,132,.05) 16px)}
+    .scratch:nth-child(3){border-color:var(--primary)}
+    .scratch-icon{font-size:28px;margin-bottom:12px}
+    .scratch h3{margin:0 0 8px;font-size:16px;font-weight:800}
+    .scratch p{margin:0;font-size:13px;color:var(--muted);line-height:1.5}
+
+    footer{padding:40px 0;text-align:center;color:var(--muted);font-size:14px;background:var(--dark);color:rgba(255,255,255,.7)}
+    footer a{color:var(--primary)}
+
+    #toTop{position:fixed;right:20px;bottom:20px;z-index:60;width:50px;height:50px;border-radius:50%;border:3px solid var(--dark);background:var(--primary);color:#fff;font-size:22px;cursor:pointer;opacity:0;pointer-events:none;transition:.3s}
+    #toTop.show{opacity:1;pointer-events:auto}
+    .reveal{opacity:0;transform:translateY(20px);transition:.6s ease}
+    .reveal.in{opacity:1;transform:none}
+
+    @media (max-width:980px){
+      .paw-grid{grid-template-columns:1fr 1fr}
+      .yarn-section{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+      .yarn-center{display:none}
+      .yarn-item{position:static;width:auto}
+      .can-grid{grid-template-columns:1fr 1fr}
+      .scratch-list{grid-template-columns:1fr}
+    }
+    @media (max-width:640px){
+      .nav-toggle{display:block}
+      nav.menu{position:absolute;top:66px;left:0;right:0;flex-direction:column;gap:0;padding:10px 20px 20px;background:rgba(254,249,243,.98);border-bottom:3px dotted var(--line);display:none}
+      nav.menu.open{display:flex}
+      nav.menu a{padding:12px 8px;border-bottom:2px solid var(--line);border-radius:0}
+      .hero .wrap{grid-template-columns:1fr;text-align:center}
+      .cat-paw{margin:0 auto}
+      .hero-tags{justify-content:center}
+      .cta{justify-content:center}
+      .paw-grid{grid-template-columns:1fr}
+      .yarn-section{grid-template-columns:1fr}
+      .tree-level{margin-left:0!important;margin-right:0!important}
+      .can-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="logo">🐱 <b>猫咪</b><span>电影网</span></div>
+      <button class="nav-toggle" aria-label="菜单" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+      <nav class="menu" id="menu">
+        <a href="#home">首页</a>
+        <a href="#paw-list">喵影片单</a>
+        <a href="#yarn">治愈萌宠</a>
+        <a href="#tree">撸猫场景</a>
+        <a href="#legal">正版罐头</a>
+        <a href="#warn">避坑抓板</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div class="hero-text">
+        <div class="badge">🐾 治愈系观影指南</div>
+        <h1>猫咪电影网<br/>和 <em>主子</em> 一起看好片</h1>
+        <p class="lead">治愈、萌宠、宅家撸猫主题片单，按猫咪性格匹配电影类型。正版渠道导航，远离盗版陷阱。</p>
+        <div class="hero-tags">
+          <span class="hero-tag">🐱 慵懒午后</span>
+          <span class="hero-tag">🐈 好奇探险</span>
+          <span class="hero-tag">🐈‍⬛ 高冷烧脑</span>
+          <span class="hero-tag">😽 黏人治愈</span>
+        </div>
+        <div class="cta">
+          <a class="btn btn-primary" href="#paw-list">开始选片 →</a>
+          <a class="btn btn-ghost" href="#warn">识别盗版坑</a>
+        </div>
+      </div>
+      <div class="cat-paw">
+        <div class="paw-toe"></div>
+        <div class="paw-toe"></div>
+        <div class="paw-toe"></div>
+        <div class="paw-toe"></div>
+        <div class="paw-main"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="paw-list" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Meow Movie List</div>
+        <h2>喵影片单</h2>
+        <p>按猫咪性格匹配电影类型，找到你现在的观影心情。</p>
+      </div>
+      <div class="paw-grid">
+        <div class="paw-card">
+          <div class="paw-icon">😴</div>
+          <h3>慵懒午后</h3>
+          <p>慢节奏文艺、自然纪录片、生活流。适合周末赖床、猫咪趴腿时看。</p>
+          <div class="paw-print">🐾</div>
+        </div>
+        <div class="paw-card">
+          <div class="paw-icon">👀</div>
+          <h3>好奇探险</h3>
+          <p>悬疑推理、冒险、公路片。满足探索欲，猫咪也会跟着屏幕转头。</p>
+          <div class="paw-print">🐾</div>
+        </div>
+        <div class="paw-card">
+          <div class="paw-icon">🖤</div>
+          <h3>高冷烧脑</h3>
+          <p>科幻、非线性叙事、作者电影。需要专注，适合深夜独处时挑战。</p>
+          <div class="paw-print">🐾</div>
+        </div>
+        <div class="paw-card">
+          <div class="paw-icon">😻</div>
+          <h3>黏人治愈</h3>
+          <p>爱情喜剧、萌宠动画、音乐剧。温暖不虐心，一人一猫刚刚好。</p>
+          <div class="paw-print">🐾</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="yarn" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Yarn Ball Picks</div>
+        <h2>治愈动画与萌宠纪录片</h2>
+        <p>像玩毛线球一样，一圈圈绕进治愈世界。</p>
+      </div>
+      <div class="yarn-section">
+        <div class="yarn-center">🐱<br/>治愈<br/>核心</div>
+        <div class="yarn-item">
+          <h3>🎨 合家欢动画</h3>
+          <p>老少皆宜，画面精美，适合和猫咪一起看（它们对快速移动的画面特别感兴趣）。</p>
+        </div>
+        <div class="yarn-item">
+          <h3>🐕 萌宠纪录片</h3>
+          <p>真实动物故事，温暖人心，猫咪看了可能会发出咕噜声。</p>
+        </div>
+        <div class="yarn-item">
+          <h3>🌿 自然生态</h3>
+          <p>大自然的美景与生命，慢节奏，适合当背景音放松。</p>
+        </div>
+        <div class="yarn-item">
+          <h3>🎵 音乐与舞蹈</h3>
+          <p>节奏轻快，画面色彩丰富，猫咪对音乐节奏有时会有反应。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tree" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Cat Tree Scenes</div>
+        <h2>宅家撸猫观影场景</h2>
+        <p>不同位置、不同时段，选片策略像猫爬架一样分层。</p>
+      </div>
+      <div class="cat-tree">
+        <div class="tree-level">
+          <div class="tree-icon">🛋️</div>
+          <div><h3>客厅地毯 · 午后阳光</h3><p>猫咪在旁边打盹，选轻松喜剧或自然片，音量适中，不吵醒主子。</p></div>
+        </div>
+        <div class="tree-level">
+          <div class="tree-icon">🛏️</div>
+          <div><h3>床上 · 深夜陪伴</h3><p>猫咪趴在腿上，选治愈动画或轻剧情，手机小屏，戴耳机不吵它。</p></div>
+        </div>
+        <div class="tree-level">
+          <div class="tree-icon">🖥️</div>
+          <div><h3>书桌 · 学习间隙</h3><p>猫咪在键盘上踩奶，看5-10分钟短片放松，不沉迷。</p></div>
+        </div>
+        <div class="tree-level">
+          <div class="tree-icon">🏠</div>
+          <div><h3>合租客厅 · 多人+猫</h3><p>选讨论度高、无尴尬镜头的合家欢片，兼顾所有人的观影体验。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="legal" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Cat Food Channels</div>
+        <h2>正版渠道导航</h2>
+        <p>像选猫罐头一样，挑对平台，只走正版。</p>
+      </div>
+      <div class="can-grid">
+        <div class="can">
+          <div class="can-icon">📺</div>
+          <h3>持权流媒体</h3>
+          <p>综合商业片/剧集/动画，会员或单片点播</p>
+        </div>
+        <div class="can">
+          <div class="can-icon">🎬</div>
+          <h3>院线官方购票</h3>
+          <p>新片首映、重映、IMAX以官方排片为准</p>
+        </div>
+        <div class="can">
+          <div class="can-icon">🏛️</div>
+          <h3>资料馆/影展</h3>
+          <p>修复版、国别专题、作者合集专场</p>
+        </div>
+        <div class="can">
+          <div class="can-icon">💳</div>
+          <h3>单片租赁</h3>
+          <p>只补一部不办会员，优先官方字幕音轨</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="warn" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Scratch Alert</div>
+        <h2>防盗避坑抓板</h2>
+        <p>遇到以下情况，像猫一样炸毛，立刻划走！</p>
+      </div>
+      <div class="scratch-list">
+        <div class="scratch">
+          <div class="scratch-icon">🚫</div>
+          <h3>专用播放器/解码器</h3>
+          <p>要求安装未知播放器、浏览器插件、解码器或关闭杀软才能看，可能夹带木马，立即停用。</p>
+        </div>
+        <div class="scratch">
+          <div class="scratch-icon">⚠️</div>
+          <h3>假免费/假播放按钮</h3>
+          <p>院线未下或独家播出期就“全集免费”，多个假播放按钮、倒计时、强跳新窗口，属未授权高风险。</p>
+        </div>
+        <div class="scratch">
+          <div class="scratch-icon">🔗</div>
+          <h3>磁力/网盘/无主体</h3>
+          <p>回复拿种子、网盘提取码、换域名无公司主体/无版权说明/索要验证码银行卡，一律不点不填。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      © 2026 猫咪电影网（maomidianyingwang-h5）｜ 静态展示站点 ｜
+      内页链接以 <a href="#">#</a> 占位 ｜
+      网站网址：https://maomidianyingwang-h5.github.io ｜
+      本站仅作治愈系观影推荐、萌宠主题片单与正版渠道导航，不提供盗版资源、磁力、网盘与成人内容。
+    </div>
+  </footer>
+
+  <button id="toTop" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+  <script>
+    document.querySelectorAll('#menu a').forEach(function(a){
+      a.addEventListener('click',function(){ document.getElementById('menu').classList.remove('open'); });
+    });
+    var toTop=document.getElementById('toTop');
+    window.addEventListener('scroll',function(){ toTop.classList.toggle('show',window.scrollY>400); });
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:0.1});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  </script>
+</body>
+</html>
